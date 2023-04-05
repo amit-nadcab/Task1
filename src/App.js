@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import Dashboard from "./components/Dashboard";
 import Login from "./pages/Login";
+import Aeps from "./pages/Aeps";
 
 function App() {
   const router = createBrowserRouter(
@@ -14,6 +15,8 @@ function App() {
       <>
         <Route path="/" element={<Login />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/AEPS" element={<Aeps />} />
+
       </>
     )
   );

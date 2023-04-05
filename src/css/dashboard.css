@@ -421,6 +421,15 @@
   .fs-10{
     font-size: 10px;
   }
+  .btn:hover {
+    color: white;
+    background-color: #3851a4;
+    /* border-color: var(--bs-btn-hover-border-color); */
+}
+.btn-check:checked+.btn, .btn.active, .btn.show, .btn:first-child:active, :not(.btn-check)+.btn:active {
+  color: white;
+  background-color: #283b7b;
+}
   /* ====================== Responsive Design ========================== */
   @media (max-width: 991px) {
     .navigation {

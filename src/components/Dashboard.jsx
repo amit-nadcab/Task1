@@ -2,6 +2,17 @@ import React from "react";
 import { useEffect } from "react";
 import "../css/dashboard.css";
 import Navbar from "./Navbar";
+import { Link } from "react-router-dom";
+import {
+  AccountBalanceOutlined,
+  AccountBalanceWallet,
+  AccountCircleRounded,
+  DashboardCustomize,
+  FingerprintOutlined,
+  List,
+  PhoneAndroid,
+} from "@mui/icons-material";
+
 export default function Dashboard() {
   useEffect(() => {
     let list = document.querySelectorAll(".navigation li");
@@ -27,151 +38,167 @@ export default function Dashboard() {
   }, []);
   return (
     <>
-      <div class="">
-        <div class="navigation">
+      <div className="">
+        <div className="navigation">
           <ul>
             <li>
-              <a href="#">
-                {/* <span class="icon">
+              <Link href="#">
+                {/* <span className="icon">
                   <ion-icon name="logo-apple"></ion-icon>
                 </span> */}
-                <span class="title">
-                  <img width={150} src="/images/Any_pe_logo.png" />
+                <span className="title">
+                  <img width={150} src="/images/Any_pe_logo.png" alt="logo" />
                 </span>
-              </a>
+              </Link>
             </li>
 
             <span className="d-flex justify-content-center">
-            <div className="text-center">
-            <span>Golu Meena</span>
-              <p>Silver Partner | RT343817</p>
-            </div>
+              <div className="text-center">
+                <span>Golu Meena</span>
+                <p>Silver Partner | RT343817</p>
+              </div>
             </span>
 
             <li>
-              <a href="#">
-                <span class="icon">
-                  <ion-icon name="home-outline"></ion-icon>
+              <Link to="/dashboard">
+                <span className="icon">
+                  <DashboardCustomize />
                 </span>
-                <span class="title">Dashboard</span>
-              </a>
+                <span className="title">Dashboard</span>
+              </Link>
             </li>
 
             <li>
-              <a href="#">
-                <span class="icon">
-                  <ion-icon name="people-outline"></ion-icon>
+              <Link href="#">
+                <span className="icon">
+                  <AccountCircleRounded />
                 </span>
-                <span class="title">Customers</span>
-              </a>
+                <span className="title">Profile</span>
+              </Link>
             </li>
 
             <li>
-              <a href="#">
-                <span class="icon">
-                  <ion-icon name="chatbubble-outline"></ion-icon>
+              <Link href="#">
+                <span className="icon">
+                  <PhoneAndroid />
                 </span>
-                <span class="title">Messages</span>
-              </a>
+                <span className="title">BEPS</span>
+              </Link>
             </li>
 
             <li>
-              <a href="#">
-                <span class="icon">
-                  <ion-icon name="help-outline"></ion-icon>
+              <Link href="#">
+                <span className="icon">
+                  <FingerprintOutlined />
                 </span>
-                <span class="title">Help</span>
-              </a>
+                <span className="title">AEPS</span>
+              </Link>
             </li>
 
             <li>
-              <a href="#">
-                <span class="icon">
-                  <ion-icon name="settings-outline"></ion-icon>
+              <Link href="#">
+                <span className="icon">
+                  <AccountBalanceOutlined />
                 </span>
-                <span class="title">Settings</span>
-              </a>
+                <span className="title">Payout</span>
+              </Link>
             </li>
 
             <li>
-              <a href="#">
-                <span class="icon">
-                  <ion-icon name="lock-closed-outline"></ion-icon>
+              <Link href="#">
+                <span className="icon">
+                  <AccountBalanceOutlined />
                 </span>
-                <span class="title">Password</span>
-              </a>
+                <span className="title">DMT</span>
+              </Link>
             </li>
 
             <li>
-              <a href="#">
-                <span class="icon">
+              <Link href="#">
+                <span className="icon">
+                  <AccountBalanceWallet />
+                </span>
+                <span className="title">Wallet</span>
+              </Link>
+            </li>
+            <li>
+              <Link href="#">
+                <span className="icon">
+                  <List />
+                </span>
+                <span className="title">Report</span>
+              </Link>
+            </li>
+            <li>
+              <Link href="#">
+                <span className="icon">
                   <ion-icon name="log-out-outline"></ion-icon>
                 </span>
-                <span class="title">Sign Out</span>
-              </a>
+                <span className="title">Account Settings</span>
+              </Link>
             </li>
           </ul>
         </div>
 
         {/* <!-- ========================= Main ==================== --> */}
-        <div class="main">
+        <div className="main">
           <Navbar />
 
           {/* <!-- ======================= Cards ================== --> */}
-          <div class="cardBox">
-            <div class="card">
+          <div className="cardBox">
+            <div className="card">
               <div>
-                <div class="numbers">1,504</div>
-                <div class="cardName">Daily Views</div>
+                <div className="numbers">1,504</div>
+                <div className="cardName">Daily Views</div>
               </div>
 
-              <div class="iconBx">
+              <div className="iconBx">
                 <ion-icon name="eye-outline"></ion-icon>
               </div>
             </div>
 
-            <div class="card">
+            <div className="card">
               <div>
-                <div class="numbers">80</div>
-                <div class="cardName">Sales</div>
+                <div className="numbers">80</div>
+                <div className="cardName">Sales</div>
               </div>
 
-              <div class="iconBx">
+              <div className="iconBx">
                 <ion-icon name="cart-outline"></ion-icon>
               </div>
             </div>
 
-            <div class="card">
+            <div className="card">
               <div>
-                <div class="numbers">284</div>
-                <div class="cardName">Comments</div>
+                <div className="numbers">284</div>
+                <div className="cardName">Comments</div>
               </div>
 
-              <div class="iconBx">
+              <div className="iconBx">
                 <ion-icon name="chatbubbles-outline"></ion-icon>
               </div>
             </div>
 
-            <div class="card">
+            <div className="card">
               <div>
-                <div class="numbers">$7,842</div>
-                <div class="cardName">Earning</div>
+                <div className="numbers">$7,842</div>
+                <div className="cardName">Earning</div>
               </div>
 
-              <div class="iconBx">
+              <div className="iconBx">
                 <ion-icon name="cash-outline"></ion-icon>
               </div>
             </div>
           </div>
 
           {/* <!-- ================ Order Details List ================= --> */}
-          <div class="details">
-            <div class="recentOrders">
-              <div class="cardHeader">
+          <div className="details">
+            <div className="recentOrders">
+              <div className="cardHeader">
                 <h2>Recent Orders</h2>
-                <a href="#" class="btn">
+                <Link href="#" className="btn">
                   View All
-                </a>
+                </Link>
               </div>
 
               <table>
@@ -190,7 +217,7 @@ export default function Dashboard() {
                     <td>$1200</td>
                     <td>Paid</td>
                     <td>
-                      <span class="status delivered">Delivered</span>
+                      <span className="status delivered">Delivered</span>
                     </td>
                   </tr>
 
@@ -199,7 +226,7 @@ export default function Dashboard() {
                     <td>$110</td>
                     <td>Due</td>
                     <td>
-                      <span class="status pending">Pending</span>
+                      <span className="status pending">Pending</span>
                     </td>
                   </tr>
 
@@ -208,7 +235,7 @@ export default function Dashboard() {
                     <td>$1200</td>
                     <td>Paid</td>
                     <td>
-                      <span class="status return">Return</span>
+                      <span className="status return">Return</span>
                     </td>
                   </tr>
 
@@ -217,7 +244,7 @@ export default function Dashboard() {
                     <td>$620</td>
                     <td>Due</td>
                     <td>
-                      <span class="status inProgress">In Progress</span>
+                      <span className="status inProgress">In Progress</span>
                     </td>
                   </tr>
 
@@ -226,7 +253,7 @@ export default function Dashboard() {
                     <td>$1200</td>
                     <td>Paid</td>
                     <td>
-                      <span class="status delivered">Delivered</span>
+                      <span className="status delivered">Delivered</span>
                     </td>
                   </tr>
 
@@ -235,7 +262,7 @@ export default function Dashboard() {
                     <td>$110</td>
                     <td>Due</td>
                     <td>
-                      <span class="status pending">Pending</span>
+                      <span className="status pending">Pending</span>
                     </td>
                   </tr>
 
@@ -244,7 +271,7 @@ export default function Dashboard() {
                     <td>$1200</td>
                     <td>Paid</td>
                     <td>
-                      <span class="status return">Return</span>
+                      <span className="status return">Return</span>
                     </td>
                   </tr>
 
@@ -253,7 +280,7 @@ export default function Dashboard() {
                     <td>$620</td>
                     <td>Due</td>
                     <td>
-                      <span class="status inProgress">In Progress</span>
+                      <span className="status inProgress">In Progress</span>
                     </td>
                   </tr>
                 </tbody>
@@ -261,15 +288,15 @@ export default function Dashboard() {
             </div>
 
             {/* <!-- ================= New Customers ================ --> */}
-            <div class="recentCustomers">
-              <div class="cardHeader">
+            <div className="recentCustomers">
+              <div className="cardHeader">
                 <h2>Recent Customers</h2>
               </div>
 
               <table>
                 <tr>
                   <td width="60px">
-                    <div class="imgBx">
+                    <div className="imgBx">
                       <img src="assets/imgs/customer02.jpg" alt="" />
                     </div>
                   </td>
@@ -282,7 +309,7 @@ export default function Dashboard() {
 
                 <tr>
                   <td width="60px">
-                    <div class="imgBx">
+                    <div className="imgBx">
                       <img src="assets/imgs/customer01.jpg" alt="" />
                     </div>
                   </td>
@@ -295,7 +322,7 @@ export default function Dashboard() {
 
                 <tr>
                   <td width="60px">
-                    <div class="imgBx">
+                    <div className="imgBx">
                       <img src="assets/imgs/customer02.jpg" alt="" />
                     </div>
                   </td>
@@ -308,7 +335,7 @@ export default function Dashboard() {
 
                 <tr>
                   <td width="60px">
-                    <div class="imgBx">
+                    <div className="imgBx">
                       <img src="assets/imgs/customer01.jpg" alt="" />
                     </div>
                   </td>
@@ -321,7 +348,7 @@ export default function Dashboard() {
 
                 <tr>
                   <td width="60px">
-                    <div class="imgBx">
+                    <div className="imgBx">
                       <img src="assets/imgs/customer02.jpg" alt="" />
                     </div>
                   </td>
@@ -334,7 +361,7 @@ export default function Dashboard() {
 
                 <tr>
                   <td width="60px">
-                    <div class="imgBx">
+                    <div className="imgBx">
                       <img src="assets/imgs/customer01.jpg" alt="" />
                     </div>
                   </td>
@@ -347,7 +374,7 @@ export default function Dashboard() {
 
                 <tr>
                   <td width="60px">
-                    <div class="imgBx">
+                    <div className="imgBx">
                       <img src="assets/imgs/customer01.jpg" alt="" />
                     </div>
                   </td>
@@ -360,7 +387,7 @@ export default function Dashboard() {
 
                 <tr>
                   <td width="60px">
-                    <div class="imgBx">
+                    <div className="imgBx">
                       <img src="assets/imgs/customer02.jpg" alt="" />
                     </div>
                   </td>

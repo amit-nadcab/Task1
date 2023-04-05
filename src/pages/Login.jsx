@@ -10,7 +10,7 @@ export default function Login() {
             <div className="col-sm-6 px-0 d-none d-sm-block">
               <img
                 src="/images/Login.png"
-                alt="Login image"
+                alt="baner"
                 className="w-100 vh-100"
                 style={{ objectFit: "cover", objectPosition: "left" }}
               />
@@ -24,7 +24,11 @@ export default function Login() {
                       style={{ color: "#709085" }}
                     ></i>
                     <span className="h1 fw-bold mb-0">
-                      <img width={150} src="/images/Any_pe_logo.png" />
+                      <img
+                        width={150}
+                        src="/images/Any_pe_logo.png"
+                        alt="logo"
+                      />
                     </span>
                   </div>
                   <form>
@@ -76,7 +80,7 @@ export default function Login() {
 
                       <div className="col">
                         {/* <!-- Simple link --> */}
-                        <a href="#!">Forgot password?</a>
+                        <Link to="">Forgot password?</Link>
                       </div>
                     </div>
 

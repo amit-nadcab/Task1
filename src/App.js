@@ -8,6 +8,7 @@ import {
 import Dashboard from "./components/Dashboard";
 import Login from "./pages/Login";
 import Aeps from "./pages/Aeps";
+import Beps from "./pages/Beps";
 
 function App() {
   const router = createBrowserRouter(
@@ -16,6 +17,8 @@ function App() {
         <Route path="/" element={<Login />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/AEPS" element={<Aeps />} />
+        <Route path="/BEPS" element={<Beps />} />
+
 
       </>
     )

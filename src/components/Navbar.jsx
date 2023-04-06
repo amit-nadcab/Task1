@@ -1,4 +1,6 @@
+import { IconButton } from "@mui/material";
 import React from "react";
+import MenuIcon from '@mui/icons-material/Menu';
 
 export default function Navbar() {
   return (
@@ -6,7 +8,18 @@ export default function Navbar() {
       <div className="text-white sticky-top bg-blue-any">
         <div className="topbar">
           <div className="toggle">
-            <ion-icon name="menu-outline"></ion-icon>
+          <IconButton
+            color="inherit"
+            aria-label="open drawer"
+            // onClick={handleDrawerOpen}
+            edge="start"
+            // sx={{
+            //   marginRight: 5,
+            //   ...(open && { display: 'none' }),
+            // }}
+          >
+            <MenuIcon />
+          </IconButton>
           </div>
 
           {/* <div className=" bg-dark rounded-2 p-3 px-3">

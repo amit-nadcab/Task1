@@ -76,21 +76,21 @@ export default function Sidebar() {
             </li>
 
             <li>
-              <Link href="#">
+              <NavLink to="/BEPS">
                 <span className="icon">
                   <PhoneAndroid />
                 </span>
                 <span className="title">BEPS</span>
-              </Link>
+              </NavLink>
             </li>
 
             <li>
-              <Link to="/AEPS">
+              <NavLink to="/AEPS">
                 <span className="icon">
                   <FingerprintOutlined />
                 </span>
                 <span className="title">AEPS</span>
-              </Link>
+              </NavLink>
             </li>
 
             <li>

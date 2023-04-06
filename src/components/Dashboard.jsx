@@ -45,7 +45,7 @@ export default function Dashboard() {
                 </div>
               </div>
               <div className="col-md-4 col-sm-12 ">
-                <div className="rounded-5 bg-blue-any p-3 text-center text-white fw-bold">
+                <div className="rounded-5 bg-blue-any p-3 text-center text-white fw-bold pointer">
                   <div>Click Hear</div>
                   <div className="fs-5">For All Services</div>
 

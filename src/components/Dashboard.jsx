@@ -4,6 +4,7 @@ import "../css/dashboard.css";
 import Navbar from "./Navbar";
 import { Link } from "react-router-dom";
 import Sidebar from "./Sidebar";
+import { SwipeDown } from "@mui/icons-material";
 
 export default function Dashboard() {
   return (
@@ -45,11 +46,13 @@ export default function Dashboard() {
                 </div>
               </div>
               <div className="col-md-4 col-sm-12 ">
-                <div className="rounded-5 bg-blue-any p-3 text-center text-white fw-bold pointer">
-                  <div>Click Hear</div>
-                  <div className="fs-5">For All Services</div>
 
-                </div>
+                <Link to='/allservices' className="text-decoration-none">
+                <div  className="rounded-5 bg-blue-any p-3 text-center text-white fw-bold pointer">
+                  <div className="d-flex align-items-center justify-content-center"> <SwipeDown/><span className="ms-1">Click Hear</span> </div>
+                  <div className="fs-5">For All Services</div>
+                  </div>
+                </Link>
               </div>
               <div className="col-md-4 col-sm-12">
               <div className="card m-3">

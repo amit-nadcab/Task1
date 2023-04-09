@@ -53,7 +53,7 @@ export default function Sidebar() {
 
           <span className="d-flex justify-content-center">
             <div className="text-center">
-              <span>Golu Meena</span>
+              <span className="fw-bold">Golu Meena</span>
               <p>Silver Partner | RT343817</p>
             </div>
           </span>

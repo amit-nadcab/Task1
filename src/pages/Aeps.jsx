@@ -28,7 +28,7 @@ export default function Aeps() {
                           Txn Type <span className="text-danger">*</span>
                         </label>
                         <select
-                          class="form-select form-select-sm mb-3"
+                          className="form-select form-select-sm mb-3"
                           aria-label="Txn Type"
                         >
                           <option selected>Select</option>
@@ -42,7 +42,7 @@ export default function Aeps() {
                           Bank Name <span className="text-danger">*</span>
                         </label>
                         <select
-                          class="form-select form-select-sm mb-3"
+                          className="form-select form-select-sm mb-3"
                           aria-label="Bank Name"
                         >
                           <option selected>--Select--</option>
@@ -56,7 +56,7 @@ export default function Aeps() {
                           Aadhar Number <span className="text-danger">*</span>
                         </label>
                         <input
-                          class="form-control form-control-sm"
+                          className="form-control form-control-sm"
                           type="Number"
                           placeholder="Enter 12 Digit Aadhar Number"
                           aria-label="default input example"
@@ -67,7 +67,7 @@ export default function Aeps() {
                           Mobile Number <span className="text-danger">*</span>
                         </label>
                         <input
-                          class="form-control form-control-sm"
+                          className="form-control form-control-sm"
                           type="Number"
                           placeholder="Enter 10 Digit Mobile Number"
                           aria-label="default input example"
@@ -78,7 +78,7 @@ export default function Aeps() {
                           Device Type <span className="text-danger">*</span>
                         </label>
                         <select
-                          class="form-select form-select-sm mb-3"
+                          className="form-select form-select-sm mb-3"
                           aria-label="Txn Type"
                         >
                           <option selected>Select</option>
@@ -101,7 +101,7 @@ export default function Aeps() {
                           <span className="text-danger">*</span>
                         </label>
                         <input
-                          class="form-control form-control-sm"
+                          className="form-control form-control-sm"
                           type="Number"
                           placeholder="Withdrawal Amount"
                           aria-label="default input example"
@@ -109,30 +109,43 @@ export default function Aeps() {
                       </div>
                     </div>
                     <div className="ms-5 pt-3">
-                      <div class="form-check form-control-sm">
+                      <div className="form-check form-control-sm">
                         <input
-                          class="form-check-input"
+                          className="form-check-input"
                           type="checkbox"
                           value=""
                           id="flexCheckDefault"
                         />
-                        <label class="form-check-label" for="flexCheckDefault">
-                        I/Customer hereby accepts and confirm all the terms & conditions under best of my knowledge.
+                        <label
+                          className="form-check-label"
+                          htmlFor="flexCheckDefault"
+                        >
+                          I/Customer hereby accepts and confirm all the terms &
+                          conditions under best of my knowledge.
                         </label>
                       </div>
-                      <div class="form-check form-control-sm">
+                      <div className="form-check form-control-sm">
                         <input
-                          class="form-check-input"
+                          className="form-check-input"
                           type="checkbox"
                           value=""
                           id="flexCheckDefault"
                         />
-                        <label class="form-check-label" for="flexCheckDefault">
-                        I/Retailer hereby accepts and confirm all the terms & conditions under best of my knowledge.
+                        <label
+                          className="form-check-label"
+                          htmlFor="flexCheckDefault"
+                        >
+                          I/Retailer hereby accepts and confirm all the terms &
+                          conditions under best of my knowledge.
                         </label>
                       </div>
-                      <p className="fs-14 fw-bold">Note: You're not allowed to do more than 5 transactions of each transaction mode for same Aadhaar</p>
-                    <button className="btn bg-blue-any text-white fs-14">CAPTURE FINGERPRINT</button>
+                      <p className="fs-14 fw-bold">
+                        Note: You're not allowed to do more than 5 transactions
+                        of each transaction mode for same Aadhaar
+                      </p>
+                      <button className="btn bg-blue-any text-white fs-14">
+                        CAPTURE FINGERPRINT
+                      </button>
                     </div>
                   </div>
                 </div>

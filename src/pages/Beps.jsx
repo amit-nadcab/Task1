@@ -28,7 +28,7 @@ export default function Beps() {
                             Category <span className="text-danger">*</span>
                           </label>
                           <input
-                            class="form-control form-control-sm"
+                            className="form-control form-control-sm"
                             type="text"
                             placeholder="Datacard Prepaid"
                             aria-label="Datacard Prepaid"
@@ -39,7 +39,7 @@ export default function Beps() {
                             Operator Name <span className="text-danger">*</span>
                           </label>
                           <input
-                            class="form-control form-control-sm"
+                            className="form-control form-control-sm"
                             type="text"
                             placeholder="Jio Fi"
                             aria-label="Jio Fi"
@@ -47,10 +47,10 @@ export default function Beps() {
                         </div>
                         <div className="pb-2">
                           <label className="mb-1 form-label">
-                             Mobile Number <span className="text-danger">*</span>
+                            Mobile Number <span className="text-danger">*</span>
                           </label>
                           <input
-                            class="form-control form-control-sm"
+                            className="form-control form-control-sm"
                             type="Number"
                             placeholder="Enter 10 Digit Mobile Number"
                             aria-label="Enter 10 Digit Mobile Number"
@@ -61,28 +61,30 @@ export default function Beps() {
                             Mode <span className="text-danger">*</span>
                           </label>
                           <select
-                          class="form-select form-select-sm "
-                          aria-label="Bank Name"
-                        >
-                          <option selected>online</option>
-                          <option value="1">One</option>
-                          <option value="2">Two</option>
-                          <option value="3">Three</option>
-                        </select>
+                            className="form-select form-select-sm "
+                            aria-label="Bank Name"
+                          >
+                            <option selected>online</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                          </select>
                         </div>
                         <div className="pb-2">
                           <label className="mb-1 form-label">
-                              Amount <span className="text-danger">*</span>
+                            Amount <span className="text-danger">*</span>
                           </label>
                           <input
-                            class="form-control form-control-sm"
+                            className="form-control form-control-sm"
                             type="Number"
                             placeholder="Amount"
                             aria-label="Amount"
                           />
                         </div>
                         <div className="d-flex justify-content-center pt-3">
-                        <button className="btn bg-blue-any text-white fs-14 w-100">SUBMIT</button>
+                          <button className="btn bg-blue-any text-white fs-14 w-100">
+                            SUBMIT
+                          </button>
                         </div>
                       </div>
                     </div>

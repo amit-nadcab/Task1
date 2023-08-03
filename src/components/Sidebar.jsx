@@ -10,9 +10,12 @@ import {
   List,
   PhoneAndroid,
   Settings,
-  SettingsAccessibility,
 } from "@mui/icons-material";
+import { useSelector } from "react-redux";
 export default function Sidebar() {
+  const { userProfile } = useSelector((state) => state.data.value);
+
+  console.log(userProfile?.user_name, "AA");
   useEffect(() => {
     let list = document.querySelectorAll(".navigation li");
 
@@ -53,8 +56,8 @@ export default function Sidebar() {
 
           <span className="d-flex justify-content-center">
             <div className="text-center">
-              <span className="fw-bold">Golu Meena</span>
-              <p>Silver Partner | RT343817</p>
+              <span className="fw-bold">{userProfile?.user_name}</span>
+              <p>Silver Partner | {userProfile?.user_code}</p>
             </div>
           </span>
 
@@ -68,7 +71,7 @@ export default function Sidebar() {
           </li>
 
           <li>
-            <NavLink to="#">
+            <NavLink to="/profile">
               <span className="icon">
                 <AccountCircleRounded />
               </span>

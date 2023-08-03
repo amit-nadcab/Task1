@@ -1,0 +1,13 @@
+.profile ul {
+  list-style: none;
+  padding: 0;
+}
+
+.profile li {
+  margin-bottom: 10px;
+}
+
+.profile .label {
+  font-weight: bold;
+  margin-right: 10px;
+}

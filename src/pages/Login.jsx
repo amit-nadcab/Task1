@@ -1,7 +1,24 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { userLogin } from "../redux/slice/user";
+import { toast } from "react-toastify";
+import { checkIfNumber } from '../utils/validation'
 
 export default function Login() {
+  const [inputValue, setInputValue] = useState({});
+  const navigate = useNavigate();
+
+  const getInput = (name, value) => {
+    const data = { [name]: value };
+    setInputValue({ ...inputValue, ...data });
+  };
+
+  const handleSubmit = () => {
+    userLogin(inputValue, toast, navigate);
+  };
+
+
+
   return (
     <>
       <section className="vh-100">
@@ -32,33 +49,44 @@ export default function Login() {
                     </span>
                   </div>
                   <form>
-                    {/* Email input  */}
+                    {/* Number input  */}
                     <div className="form-outline mb-4">
-                      <label className="form-label" for="form2Example1">
-                        Email address
+                      <label className="form-label" htmlFor="form2Example1">
+                        Mobile No.
                       </label>
                       <input
-                        type="email"
+                        onKeyDown={(event) => checkIfNumber(event)}
+                        type="text"
                         id="form2Example1"
+                        name="number"
+                        maxLength={10}
+                        minLength={10}
                         className="form-control"
+                        onChange={(e) =>
+                          getInput(e.target.name, e.target.value)
+                        }
                       />
                     </div>
 
                     {/* <!-- Password input --> */}
                     <div className="form-outline mb-4">
-                      <label className="form-label" for="form2Example2">
+                      <label className="form-label" htmlFor="form2Example2">
                         Password
                       </label>
                       <input
                         type="password"
                         id="form2Example2"
+                        name="password"
                         className="form-control"
+                        onChange={(e) =>
+                          getInput(e.target.name, e.target.value)
+                        }
                       />
                     </div>
 
                     {/* <!-- 2 column grid layout for inline styling --> */}
                     <div className="row mb-4">
-                      <div className="col d-flex justify-content-center">
+                      <div className="col d-flex justify-content-start">
                         {/* <!-- Checkbox --> */}
                         <div className="form-check">
                           <input
@@ -66,11 +94,10 @@ export default function Login() {
                             type="checkbox"
                             value=""
                             id="form2Example31"
-                            checked
                           />
                           <label
                             className="form-check-label"
-                            for="form2Example31"
+                            htmlFor="form2Example31"
                           >
                             {" "}
                             Remember me{" "}
@@ -78,8 +105,7 @@ export default function Login() {
                         </div>
                       </div>
 
-                      <div className="col">
-                        {/* <!-- Simple link --> */}
+                      <div className="col d-flex justify-content-end">
                         <Link to="">Forgot password?</Link>
                       </div>
                     </div>
@@ -87,23 +113,12 @@ export default function Login() {
                     {/* <!-- Submit button --> */}
                     <Link
                       type="button"
-                      to="/dashboard"
+                      // to="/dashboard"
                       className="btn btn-primary btn-block mb-4 w-100"
+                      onClick={() => handleSubmit()}
                     >
                       Sign in
                     </Link>
-
-                    <p className="small mb-5 pb-lg-2">
-                      <a className="text-muted" href="#!">
-                        Forgot password?
-                      </a>
-                    </p>
-                    <p>
-                      Don't have an account?{" "}
-                      <a href="#!" className="link-info">
-                        Register here
-                      </a>
-                    </p>
                   </form>
                 </div>
               </div>

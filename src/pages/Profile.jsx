@@ -1,16 +1,12 @@
-import { useEffect, useState } from "react";
+
 import Navbar from "../components/Navbar";
 import Sidebar from "../components/Sidebar";
 import "../css/profile.css";
 import { useSelector } from "react-redux";
 
 const Profile = () => {
+
   const { userProfile } = useSelector((state) => state.data.value);
-
-
-
-
-
 
   return (
     <>

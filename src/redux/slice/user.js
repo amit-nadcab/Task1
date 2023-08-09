@@ -63,33 +63,55 @@ export const checkInformation = async (navigate) => {
         Authorization: `Bearer ${localStorage.getItem("token")}`,
       },
     });
-    if (res?.data?.data?.document === null) {
+
+    if (
+      res?.data?.data?.document === null ||
+      res?.data?.data?.address === null
+    ) {
       navigate("/documents");
-    }
-    if (res?.data?.data?.address === null) {
-      navigate("/documents");
+    } else if (
+      res?.data.data?.document.aadhaar_card_b_status === "Processing" &&
+      res?.data.data?.document.aadhaar_card_f_status === "Processing" &&
+      res?.data.data?.document.pand_card_status === "Processing"
+    ) {
+      alert("YOUR Profile is under Processing");
     }
   } catch (error) {
     console.log(error);
   }
 };
-
 export const uploadDocumnets = async (dispatch, formValue) => {
   try {
-    console.log(formValue.images[0].name, "formValue");
+    console.log(formValue.images, "formValue");
 
-    const data = await axios.post(
-      `${url}documents`,
-      { images: formValue.images[0].names },
-      {
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${localStorage.getItem("token")}`,
-        },
-      }
-    );
+    const a = formValue.images.filter((d) => console.log(d));
 
-    console.log(data, "RES UPLOAD");
+    const formData = new FormData();
+
+    formData.append("images", formValue.images);
+    formData.append("panCardNumber", formValue.panCardNumber);
+    formData.append("aadhaarNumber", formValue.aadhaarNumber);
+
+    console.log(formData["images"], "formData++");
+
+    const data = await axios.post(`${url}documents`, formData, {
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${localStorage.getItem("token")}`,
+      },
+    });
+
+    // console.log(data, "RES UPLOAD");
+  } catch (error) {
+    console.log(error);
+  }
+};
+export const checkOnboardStatus = async (dispatch, mobileNumber) => {
+  try {
+    const data = await axios.post(`${url}onBoardStatus`, {
+      mobileNumber: mobileNumber,
+    });
+    console.log(data.data);
   } catch (error) {
     console.log(error);
   }

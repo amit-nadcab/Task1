@@ -82,10 +82,6 @@ export const checkInformation = async (navigate) => {
 };
 export const uploadDocumnets = async (dispatch, formValue) => {
   try {
-    console.log(formValue.images, "formValue");
-
-    // const a = formValue.images.filter((d) => console.log(d));
-
     const selectedImages = formValue.images.slice(0, 3);
 
     const formData = new FormData();
@@ -96,16 +92,14 @@ export const uploadDocumnets = async (dispatch, formValue) => {
     formData.append("panCardNumber", formValue.panCardNumber);
     formData.append("aadhaarNumber", formValue.aadhaarNumber);
 
-    console.log(formData, "jkl");
-
     const data = await axios.post(`${url}documents`, formData, {
       headers: {
-        // "Content-Type": "multipart/form-data",
+        "Content-Type": "multipart/form-data",
         Authorization: `Bearer ${localStorage.getItem("token")}`,
       },
     });
 
-    // console.log(data, "RES UPLOAD");
+    console.log(data, "RES UPLOAD");
   } catch (error) {
     console.log(error);
   }

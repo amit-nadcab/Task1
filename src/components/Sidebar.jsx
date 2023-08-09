@@ -11,11 +11,15 @@ import {
   PhoneAndroid,
   Settings,
 } from "@mui/icons-material";
-import { useSelector } from "react-redux";
-export default function Sidebar() {
-  const { userProfile } = useSelector((state) => state.data.value);
+import { useDispatch, useSelector } from "react-redux";
+import { getUserProfile } from "../redux/slice/user";
 
-  console.log(userProfile?.user_name, "AA");
+export default function Sidebar() {
+
+  const { userProfile } = useSelector((state) => state.data.value);
+  const dispatch = useDispatch();
+
+
   useEffect(() => {
     let list = document.querySelectorAll(".navigation li");
 
@@ -39,6 +43,11 @@ export default function Sidebar() {
     };
   }, []);
 
+  useEffect(() => {
+    getUserProfile(dispatch);
+  }, []);
+
+
   return (
     <>
       <div className="navigation">
@@ -57,7 +66,7 @@ export default function Sidebar() {
           <span className="d-flex justify-content-center">
             <div className="text-center">
               <span className="fw-bold">{userProfile?.user_name}</span>
-              <p>Silver Partner | {userProfile?.user_code}</p>
+              <p>{userProfile?.user_type} | {userProfile?.user_code}</p>
             </div>
           </span>
 

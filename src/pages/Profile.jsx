@@ -1,20 +1,17 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import Sidebar from "../components/Sidebar";
 import "../css/profile.css";
-import user, { getUserProfile } from "../redux/slice/user";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 
 const Profile = () => {
   const { userProfile } = useSelector((state) => state.data.value);
 
-  console.log(userProfile, "userProfile");
 
-  const dispatch = useDispatch();
 
-  useState(() => {
-    getUserProfile(dispatch);
-  }, []);
+
+
+
   return (
     <>
       <div className="">

@@ -43,8 +43,8 @@ const Profile = () => {
                   <li>Firm Name: {userProfile?.user_firm_name}</li>
                   <li>Date of Birth: {userProfile?.user_dob}</li>
                   <li>Gender: {userProfile?.user_gender}</li>
-                  <li>Aadhar No: -----------------</li>
-                  <li>PAN No: ------------------</li>
+                  <li>Aadhar No: {userProfile?.user_document?.aadhaar_card_number}</li>
+                  <li>PAN No: {userProfile?.user_document?.pan_card_number}</li>
                   <li>Address: {userProfile?.user_address?.address_1}</li>
                   <li>City: ------------</li>
                   <li>State: --------</li>

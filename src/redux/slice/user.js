@@ -84,19 +84,23 @@ export const uploadDocumnets = async (dispatch, formValue) => {
   try {
     console.log(formValue.images, "formValue");
 
-    const a = formValue.images.filter((d) => console.log(d));
+    // const a = formValue.images.filter((d) => console.log(d));
+
+    const selectedImages = formValue.images.slice(0, 3);
 
     const formData = new FormData();
 
-    formData.append("images", formValue.images);
+    selectedImages.forEach((image, index) => {
+      formData.append(`images`, image);
+    });
     formData.append("panCardNumber", formValue.panCardNumber);
     formData.append("aadhaarNumber", formValue.aadhaarNumber);
 
-    console.log(formData["images"], "formData++");
+    console.log(formData, "jkl");
 
     const data = await axios.post(`${url}documents`, formData, {
       headers: {
-        "Content-Type": "application/json",
+        // "Content-Type": "multipart/form-data",
         Authorization: `Bearer ${localStorage.getItem("token")}`,
       },
     });
@@ -116,5 +120,12 @@ export const checkOnboardStatus = async (dispatch, mobileNumber) => {
     console.log(error);
   }
 };
-
+export const addAddress = async (dispatch, formValue) => {
+  try {
+    const data = await axios.post(`${url}addAddress`, formValue);
+    console.log(data.data);
+  } catch (error) {
+    console.log(error);
+  }
+};
 export default userSlice.reducer;

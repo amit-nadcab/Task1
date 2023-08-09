@@ -140,67 +140,111 @@ const Status = () => {
                       <p className="m-0">Address</p>
                     </div>
                     <div className="p-3 pb-4">
+                      <h6>Current Address</h6>
                       <div className="pb-2">
                         <label className="mb-1 form-label">
-                          Adhaar Front <span className="text-danger">*</span>
+                          Address <span className="text-danger">*</span>
                         </label>
                         <input
                           className="form-control form-control-sm"
-                          type="file"
-                          placeholder="Datacard Prepaid"
+                          type="text"
+                          placeholder="Enter Address"
                           aria-label="Datacard Prepaid"
                         />
                       </div>
                       <div className="pb-2">
                         <label className="mb-1 form-label">
-                          Adhar Back <span className="text-danger">*</span>
+                          State <span className="text-danger">*</span>
+                        </label>
+                        <select name="cars" id="cars" form="carform"
+                          className="form-control form-control-sm"
+                          placeholder="Select State"
+                        >
+                          <option value="volvo">Goa</option>
+                          <option value="saab">Delhi</option>
+                          <option value="opel">Panjab</option>
+                          <option value="audi">Rajasthan</option>
+                        </select>
+                      </div>
+                      <div className="pb-2">
+                        <label className="mb-1 form-label">
+                          District <span className="text-danger">*</span>
                         </label>
                         <input
                           className="form-control form-control-sm"
-                          type="file"
+                          type="text"
                           placeholder="Jio Fi"
                           aria-label="Jio Fi"
                         />
                       </div>
                       <div className="pb-2">
                         <label className="mb-1 form-label">
-                          Pan Card <span className="text-danger">*</span>
+                          Pincode <span className="text-danger">*</span>
                         </label>
                         <input
                           className="form-control form-control-sm"
-                          type="file"
-                        // placeholder="Enter 10 Digit Mobile Number"
-                        // aria-label="Enter 10 Digit Mobile Number"
+                          type="text"
+                          placeholder="Jio Fi"
+                          aria-label="Jio Fi"
+                        />
+                      </div>
+                    </div>
+                    {/* <div className="p-3 pb-4">
+                      <h6>Permanent Address</h6>
+                      <div className="pb-2">
+                        <label className="mb-1 form-label">
+                          Address <span className="text-danger">*</span>
+                        </label>
+                        <input
+                          className="form-control form-control-sm"
+                          type="text"
+                          placeholder="Enter Address"
+                          aria-label="Datacard Prepaid"
                         />
                       </div>
                       <div className="pb-2">
                         <label className="mb-1 form-label">
-                          Addhar Card Number <span className="text-danger">*</span>
+                          State <span className="text-danger">*</span>
+                        </label>
+                        <select name="cars" id="cars" form="carform"
+                          className="form-control form-control-sm"
+                          placeholder="Select State"
+                        >
+                          <option value="volvo">Goa</option>
+                          <option value="saab">Delhi</option>
+                          <option value="opel">Panjab</option>
+                          <option value="audi">Rajasthan</option>
+                        </select>
+                      </div>
+                      <div className="pb-2">
+                        <label className="mb-1 form-label">
+                          District <span className="text-danger">*</span>
                         </label>
                         <input
                           className="form-control form-control-sm"
-                          type="Number"
-                          placeholder="Amount"
-                          aria-label="Amount"
+                          type="text"
+                          placeholder="Jio Fi"
+                          aria-label="Jio Fi"
                         />
                       </div>
                       <div className="pb-2">
                         <label className="mb-1 form-label">
-                          Pan Card Number <span className="text-danger">*</span>
+                          Pincode <span className="text-danger">*</span>
                         </label>
                         <input
                           className="form-control form-control-sm"
-                          type="Number"
-                          placeholder="Amount"
-                          aria-label="Amount"
+                          type="text"
+                          placeholder="Jio Fi"
+                          aria-label="Jio Fi"
                         />
                       </div>
+
                       <div className="d-flex justify-content-center pt-3">
                         <button className="btn bg-blue-any text-white fs-14 w-25">
                           SUBMIT
                         </button>
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>
